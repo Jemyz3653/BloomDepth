@@ -1,0 +1,78 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "bloomdepth:block/mangrove_propagule_petal",
+    "petal": "bloomdepth:block/mangrove_propagule_petal",
+    "petal_dark": "bloomdepth:block/mangrove_propagule_petal_dark",
+    "center": "bloomdepth:block/mangrove_propagule_center",
+    "stem": "bloomdepth:block/mangrove_propagule_stem",
+    "leaf": "bloomdepth:block/mangrove_propagule_leaf"
+  },
+  "elements": [
+    {
+      "from": [
+        7.4,
+        5.6,
+        7.4
+      ],
+      "to": [
+        8.6,
+        16,
+        8.6
+      ],
+      "faces": {
+        "down": {
+          "texture": "#stem"
+        },
+        "up": {
+          "texture": "#stem"
+        },
+        "north": {
+          "texture": "#stem"
+        },
+        "south": {
+          "texture": "#stem"
+        },
+        "west": {
+          "texture": "#stem"
+        },
+        "east": {
+          "texture": "#stem"
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        4.6,
+        7
+      ],
+      "to": [
+        9,
+        6.6,
+        9
+      ],
+      "faces": {
+        "down": {
+          "texture": "#petal"
+        },
+        "up": {
+          "texture": "#petal"
+        },
+        "north": {
+          "texture": "#petal"
+        },
+        "south": {
+          "texture": "#petal"
+        },
+        "west": {
+          "texture": "#petal"
+        },
+        "east": {
+          "texture": "#petal"
+        }
+      }
+    }
+  ]
+}

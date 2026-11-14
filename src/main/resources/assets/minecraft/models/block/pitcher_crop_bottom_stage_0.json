@@ -1,0 +1,201 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "bloomdepth:block/pitcher_plant_petal",
+    "petal": "bloomdepth:block/pitcher_plant_petal",
+    "petal_dark": "bloomdepth:block/pitcher_plant_petal_dark",
+    "center": "bloomdepth:block/pitcher_plant_center",
+    "stem": "bloomdepth:block/pitcher_plant_stem",
+    "leaf": "bloomdepth:block/pitcher_plant_leaf"
+  },
+  "elements": [
+    {
+      "from": [
+        7.337,
+        0.0,
+        7.376
+      ],
+      "to": [
+        8.663,
+        1.04,
+        8.624
+      ],
+      "faces": {
+        "down": {
+          "texture": "#stem"
+        },
+        "up": {
+          "texture": "#stem"
+        },
+        "north": {
+          "texture": "#stem"
+        },
+        "south": {
+          "texture": "#stem"
+        },
+        "west": {
+          "texture": "#stem"
+        },
+        "east": {
+          "texture": "#stem"
+        }
+      }
+    },
+    {
+      "from": [
+        7.818,
+        0.0,
+        7.818
+      ],
+      "to": [
+        8.182,
+        4.16,
+        8.182
+      ],
+      "faces": {
+        "down": {
+          "texture": "#stem"
+        },
+        "up": {
+          "texture": "#stem"
+        },
+        "north": {
+          "texture": "#stem"
+        },
+        "south": {
+          "texture": "#stem"
+        },
+        "west": {
+          "texture": "#stem"
+        },
+        "east": {
+          "texture": "#stem"
+        }
+      }
+    },
+    {
+      "from": [
+        6.635,
+        0.9412,
+        7.337
+      ],
+      "to": [
+        8.117,
+        1.1388,
+        8.663
+      ],
+      "faces": {
+        "down": {
+          "texture": "#leaf"
+        },
+        "up": {
+          "texture": "#leaf"
+        },
+        "north": {
+          "texture": "#leaf"
+        },
+        "south": {
+          "texture": "#leaf"
+        },
+        "west": {
+          "texture": "#leaf"
+        },
+        "east": {
+          "texture": "#leaf"
+        }
+      },
+      "rotation": {
+        "origin": [
+          7.376,
+          1.04,
+          8.0
+        ],
+        "axis": "z",
+        "angle": -22.5
+      }
+    },
+    {
+      "from": [
+        7.87,
+        1.7732,
+        7.376
+      ],
+      "to": [
+        9.222,
+        1.9708,
+        8.624
+      ],
+      "faces": {
+        "down": {
+          "texture": "#leaf"
+        },
+        "up": {
+          "texture": "#leaf"
+        },
+        "north": {
+          "texture": "#leaf"
+        },
+        "south": {
+          "texture": "#leaf"
+        },
+        "west": {
+          "texture": "#leaf"
+        },
+        "east": {
+          "texture": "#leaf"
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.546,
+          1.872,
+          8.0
+        ],
+        "axis": "z",
+        "angle": 22.5
+      }
+    },
+    {
+      "from": [
+        7.038,
+        2.7092,
+        7.662
+      ],
+      "to": [
+        8.234,
+        2.9068,
+        8.806
+      ],
+      "faces": {
+        "down": {
+          "texture": "#leaf"
+        },
+        "up": {
+          "texture": "#leaf"
+        },
+        "north": {
+          "texture": "#leaf"
+        },
+        "south": {
+          "texture": "#leaf"
+        },
+        "west": {
+          "texture": "#leaf"
+        },
+        "east": {
+          "texture": "#leaf"
+        }
+      },
+      "rotation": {
+        "origin": [
+          7.636,
+          2.808,
+          8.234
+        ],
+        "axis": "z",
+        "angle": -22.5
+      }
+    }
+  ]
+}

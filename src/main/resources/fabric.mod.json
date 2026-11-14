@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "bloomdepth",
+  "version": "${version}",
+  "name": "BloomDepth 3D Flowers",
+  "description": "Volumetric vanilla flowers and 3D items, including ColoredM flower pots.",
+  "authors": ["Detemkur-Studios"],
+  "license": "MIT",
+  "environment": "*",
+  "icon": "assets/bloomdepth/icon.png",
+  "suggests": {"coloredm": ">=1.0.1", "lilybloom": "*"},
+  "depends": {"fabricloader": ">=0.19.5", "minecraft": "26.3", "java": ">=25"}
+}
