@@ -1,4 +1,4 @@
-# BloomDepth 3D Flowers 1.0.0
+# BloomDepth 3D Flowers 1.1.0
 
 Minecraft Java 26.3 · Fabric Loader 0.19.5+ · Java 25 · Client + Server.
 
@@ -13,3 +13,5 @@ The models and textures are included in `src/main/resources`. To rebuild from so
 Run `python tools/draw_icon.py --curseforge BloomDepth-icon.png` with Pillow to regenerate the embedded icon and a 512px project logo.
 
 License MIT. Created with ChatGPT by OpenAI.
+
+Version 1.1.0 connects peony blooms to their stems and adds more blooms to peonies, rose bushes and lilacs. Small flowers can appear in four natural orientations.

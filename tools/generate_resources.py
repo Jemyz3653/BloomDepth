@@ -201,16 +201,31 @@ def tall_form(style):
             a=n*math.pi/4; y=8+math.sin(a)*4.4; z=8+math.cos(a)*4.4
             upper.append(box(9.3,y-1.28,z-1.28,10.85,y+1.28,z+1.28,'petal' if n%2 else 'petal_dark'))
     elif style=='lilac':
-        lower+=petals(5.3,13.45,8.8,2,.78,1,.9)
-        for x,y,z in [(5.1,8.5,7.5),(10.9,9.5,8.1),(7.35,12.3,8.8),(8.8,15,8.6)]:
+        for x,y,z in [(5.3,13.45,8.8),(10.6,11,6.5),(7.8,14.4,10.8)]:
+            lower.append(stem(x,z,y,.7))
+            lower+=petals(x,y,z,2,.78,1,.9)
+        for x,y,z in [(5.1,8.5,7.5),(10.9,9.5,8.1),(7.35,12.3,8.8),(8.8,15,8.6),
+                      (4.5,4.7,10),(11,5.7,5.3),(7.4,10.5,4.5)]:
             upper.append(stem(x,z,y,.7))
             upper+=petals(x,y,z,2.25,.8,1.15,1)
     elif style=='roses':
-        lower+=cup(5.3,10.7,8.4,1.85,2.8)+cup(10.55,13,7.65,1.8,2.7)
-        upper+=cup(5.1,5.7,8.45,1.75,2.8)+cup(10.4,8.9,7.9,2.45,3)+cup(7.2,12,8.8,1.9,3)
+        for x,y,z in [(5.3,10.7,8.4),(10.55,13,7.65),(7.7,6.9,11),(8.8,14.3,4.9)]:
+            lower.append(stem(x,z,y,.75))
+            lower+=cup(x,y,z,1.8,2.7)
+        for x,y,z in [(5.1,5.7,8.45),(10.4,8.9,7.9),(7.2,12,8.8),
+                      (4.9,10.7,4.5),(10.5,4.1,11.1)]:
+            upper.append(stem(x,z,y,.75))
+            upper+=cup(x,y,z,1.9,3)
     elif style=='peony':
         lower.append(leaf(5.4,13.5,8,4.1,6,-22.5))
-        for x,y,z in [(5.05,7.1,8.8),(10.65,11.3,7.9),(7.6,14.1,8.4)]:
+        for x,y,z in [(5.2,11.9,9.7),(10.5,13,6.4)]:
+            lower.append(stem(x,z,y,.8))
+            lower+=petals(x,y,z,2.4,1.15,1.3,1.2)+cup(x,y+.5,z,1.4,1.5)
+        for x,y,z in [(5.05,7.1,8.8),(10.65,11.3,7.9),(7.6,14.1,8.4),
+                      (5.5,11.1,4.8),(10.7,4,10.8)]:
+            upper.append(stem(x,z,y,.75))
+            upper.append(box(min(x,8)-.35,2,min(z,8)-.35,
+                             max(x,8)+.35,2.7,max(z,8)+.35,'stem'))
             upper+=petals(x,y,z,3.05,1.28,1.6,1.55)+cup(x,y+.5,z,1.65,1.7)
     elif style=='pitcher':
         lower=[box(5.45,0,5.6,10.55,4,10.4,'stem'),stem(8,8,16,1.4),
@@ -230,6 +245,9 @@ def generate(vanilla):
         tex=palette(name,*colors)
         elements=small_form(style,h)
         render_model(MC,name,elements,tex)
+        # Blockstate rotations vary the asymmetric leaves without extra textures.
+        dump(MC/'blockstates'/f'{name}.json', {'variants':{'':[
+            {'model':f'minecraft:block/{name}','y':angle} for angle in (0,90,180,270)]}})
         item(name,elements,tex)
         pot(name,elements,tex,pot_elements)
         if name=='torchflower':

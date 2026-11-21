@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/azure_bluet",
+        "y": 0
+      },
+      {
+        "model": "minecraft:block/azure_bluet",
+        "y": 90
+      },
+      {
+        "model": "minecraft:block/azure_bluet",
+        "y": 180
+      },
+      {
+        "model": "minecraft:block/azure_bluet",
+        "y": 270
+      }
+    ]
+  }
+}
